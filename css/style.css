@@ -204,7 +204,7 @@ header {
       box-shadow: 0 0 200px 150px #763CAC; 
       position: absolute;
       top: 55%;
-      right: 20%;
+      right: 17%;
       z-index: -1;
     }
     .index {
@@ -368,7 +368,7 @@ header {
   .parent-bar {
     padding: 100px 0px;
     position: absolute;
-    left: 50px;
+    left: 5%;
     top: 30%;
     animation: parent-bar linear;
     animation-timeline: view();
@@ -565,7 +565,7 @@ header {
     svg {
       width: 700px;
       height: 700px;
-      translate: 40% -10%;
+      translate: 85% -10%;
       .logo_svg {
         rotate: -90deg;
       }
@@ -600,19 +600,18 @@ header {
       background-color: #2B0B3A;
       position: absolute;
       top: 25%;
-      right: 5%;
+      right: 10%;
       animation: education linear;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;        
       a {
         img {
-          width: 90%;
-          height: 90%;
-          border-top-left-radius: 10px;
-          border-bottom-right-radius: 10px;
+          width: 95%;
+          height: 95%;
+          border-radius: 20px;
           position: absolute;
-          bottom: -15px;
-          right: -15px;
+          bottom: -20px;
+          right: -20px;
         }  
       }
     }
@@ -624,18 +623,18 @@ header {
       box-shadow: 0 0 200px 200px #763CAC; 
       position: absolute;
       top: 55%;
-      right: 30%;
+      right: 25%;
       z-index: -1;
     }
     h2 {
       color: #fff;
       text-transform: capitalize;
-      font-size: 25px;
+      font-size: 30px;
       font-family: var(--italic-font) ;
       font-weight: 400;
       position: relative;
       top: 25%;
-      left: 5%;
+      left: 9%;
       animation: edu-paragraph linear;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;        
@@ -644,12 +643,11 @@ header {
           width: 750px;
           height: 200px;
           position: absolute;
-          left: 2%;
+          left: 7%;
           top: 40%;
           background-color: #2b0b3a91;
           backdrop-filter: blur(20px);
           border-radius: 20px;
-          background: linear-gradient(to right, #2b0b3a91 90%,  #d8d8d8 99%);
           animation: education linear;
           animation-timeline: view();
           animation-range: entry 0% cover 30%;        
@@ -1354,7 +1352,7 @@ to{
         background-color: #2B0B3A;
         position: absolute;
         top: 12%;
-        right: 10%;
+        right: 25%;
         animation: edu-img linear;
         animation-timeline: view();
         animation-range: entry 0% cover 30%;        
@@ -1378,7 +1376,7 @@ to{
         box-shadow: 0 0 100px 100px #763CAC; 
         position: absolute;
         top: 25%;
-        right: 35%;
+        right: 47%;
         z-index: -1;
       }
       h2 {
@@ -1389,7 +1387,7 @@ to{
         font-weight: 400;
         position: relative;
         top: 6%;
-        left: 47%;
+        left: 33%;
         animation: education linear;
         animation-timeline: view();
         animation-range: entry 0% cover 20%;        
@@ -1409,6 +1407,7 @@ to{
             animation-range: entry 0% cover 20%;        
               p {
                   color: #fff;
+                  padding-right: 20px;
                   text-transform: capitalize;
                   font-size: 15px;
                   position: absolute;
@@ -1983,7 +1982,7 @@ to{
         background-color: #2B0B3A;
         position: absolute;
         top: 12%;
-        right: 10%;
+        right: 30%;
         animation: edu-img linear;
         animation-timeline: view();
         animation-range: entry 0% cover 30%;        
@@ -2007,7 +2006,7 @@ to{
         box-shadow: 0 0 100px 100px #763CAC; 
         position: absolute;
         top: 25%;
-        right: 35%;
+        right: 50%;
         z-index: -1;
       }
       h2 {
@@ -2018,7 +2017,7 @@ to{
         font-weight: 400;
         position: relative;
         top: 6%;
-        left: 47%;
+        left: 33%;
         animation: education linear;
         animation-timeline: view();
         animation-range: entry 0% cover 20%;        
@@ -2038,6 +2037,7 @@ to{
             animation-range: entry 0% cover 20%;        
               p {
                   color: #fff;
+                  padding-right: 20px;
                   text-transform: capitalize;
                   font-size: 18px;
                   line-height: 1.5em;
@@ -3092,6 +3092,7 @@ to{
         height: 300px;
         padding: 30px;
         position: absolute;
+        top: 10%;
         left: 7%;
         animation: home 1s linear;
         .span-1 {
@@ -3341,7 +3342,7 @@ to{
       svg {
         width: 600px;
         height: 600px;
-        translate: 17% -10%;
+        translate: 15% -10%;
         .logo_svg {
           rotate: -90deg;
         }
