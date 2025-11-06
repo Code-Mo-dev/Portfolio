@@ -1,0 +1,462 @@
+@use "_media-responsive" as *;
+@use "_var" as *;
+section.education {
+  width: 100%;
+  height: 100vh;
+  margin: 250px 0px;
+  h1 {
+    padding-top: 100px;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 50px;
+    font-family: var(--font-title);
+    letter-spacing: 7px;
+    user-select: none;
+    animation: edu-scale linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  article {
+    width: inherit;
+    height: 65vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    direction: rtl;
+    div.parent-image {
+      width: 400px;
+      height: 300px;
+      animation: edu-scale linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+      img {
+        width: inherit;
+        height: inherit;
+        border-radius: 20px;
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+        box-shadow: 0 0 15px rgba(0, 173, 198, 0.5);
+        &:hover {
+          cursor: $cursor-pointer;
+          transform: translateY(-3px);
+          box-shadow: 0 0 35px rgba(0, 173, 198, 0.9);
+        }
+      }
+      span {
+        display: block;
+        width: 100px;
+        margin: 10px 20px 0px 0px;
+      }
+    }
+    div.content {
+      width: 600px;
+      height: 250px;
+      direction: ltr;
+      animation: edu-scale linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+      h2 {
+        font-family: var(--italic-font);
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      p#typed-text-edu {
+        font-size: 20px;
+        font-family: var(--main-font);
+        text-transform: capitalize;
+        color: #fff;
+        width: 530px;
+        line-height: 1.6rem;
+        margin-bottom: 20px;
+      }
+      p#showLastPara {
+        display: none;
+        color: #fff;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-family: var(--main-font);
+        animation: scaleText 1s linear;
+        a {
+          color: var(--main-color);
+          cursor: $cursor-pointer;
+        }
+        span {
+          display: block;
+          margin-top: 20px;
+          animation: scaleText 1s linear;
+        }
+      }
+    }
+  }
+  //*todo [@keyFrames]
+  @keyframes edu-scale {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  @keyframes scaleText {
+    0% {
+      scale: 0;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+  //*todo [Responsive]
+  @include respond(laptop) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin: 200px 0px;
+      h1 {
+        padding-top: 50px;
+        font-size: 35px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 70vh;
+        div.parent-image {
+          width: 300px;
+          height: 200px;
+          span {
+            margin: 10px 20px 0px 0px;
+            svg {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+        div.content {
+          width: 500px;
+          height: 250px;
+          direction: ltr;
+          h2 {
+            font-size: 25px;
+          }
+          p#typed-text-edu {
+            font-size: 18px;
+            width: 444px;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 18px;
+            span {
+              display: block;
+              margin: 10px 0px 0px 20px;
+              svg {
+                width: 25px;
+                height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(ipadPro) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin: 200px 0px;
+      h1 {
+        padding-top: 100px;
+        font-size: 50px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 77vh;
+        padding: 0px 200px;
+        div.parent-image {
+          width: 500px;
+          height: 350px;
+          margin: auto;
+          span {
+            margin: 20px 20px 0px 0px;
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        div.content {
+          width: 645px;
+          height: 250px;
+          direction: ltr;
+          margin: auto;
+          animation-range: entry 0% cover 20%;
+          transform: translateY(-66px);
+          h2 {
+            font-size: 35px;
+            text-align: center;
+          }
+          p#typed-text-edu {
+            width: 100%;
+            font-size: 25px;
+            line-height: 2.7rem;
+            text-align: center;
+            margin-bottom: 50px;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 25px;
+            text-align: center;
+            span {
+              display: block;
+              margin: 20px 160px 0px 20px;
+              svg {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(tablet) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin: 200px 0px;
+      h1 {
+        padding-top: 100px;
+        font-size: 50px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 70vh;
+        padding: 0px 100px;
+        div.parent-image {
+          width: 500px;
+          height: 350px;
+          margin: auto;
+          span {
+            margin: 20px 20px 0px 0px;
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        div.content {
+          width: 645px;
+          height: 250px;
+          direction: ltr;
+          margin: auto;
+          transform: translateY(-35px);
+          h2 {
+            font-size: 30px;
+            text-align: center;
+          }
+          p#typed-text-edu {
+            width: 100%;
+            font-size: 22px;
+            line-height: 2.7rem;
+            text-align: center;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 22px;
+            text-align: center;
+            span {
+              display: block;
+              margin: 20px 160px 0px 20px;
+              svg {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(fold-mobile) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin: 200px 0px;
+      h1 {
+        padding-top: 30px;
+        font-size: 30px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 75vh;
+        padding: 0px 100px;
+        div.parent-image {
+          width: 300px;
+          height: 200px;
+          margin: auto;
+          span {
+            margin: 10px 20px 0px 0px;
+            svg {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+        div.content {
+          width: 460px;
+          height: 305px;
+          direction: ltr;
+          margin: auto;
+          transform: translateY(25px);
+          h2 {
+            font-size: 25px;
+            text-align: center;
+          }
+          p#typed-text-edu {
+            width: 100%;
+            font-size: 18px;
+            line-height: 2rem;
+            text-align: center;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 18px;
+            text-align: center;
+            span {
+              display: block;
+              margin: 10px 120px 0px 20px;
+              svg {
+                width: 25px;
+                height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(small-mobile) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin: 200px 0px;
+      h1 {
+        padding-top: 70px;
+        font-size: 30px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 75vh;
+        padding: 0px 17px;
+        div.parent-image {
+          width: 300px;
+          height: 200px;
+          margin: auto;
+          span {
+            margin: 10px 20px 0px 0px;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        div.content {
+          width: 460px;
+          height: 305px;
+          direction: ltr;
+          margin: auto;
+          transform: translateY(25px);
+          h2 {
+            font-size: 25px;
+            text-align: center;
+          }
+          p#typed-text-edu {
+            width: 100%;
+            font-size: 16px;
+            line-height: 2rem;
+            text-align: center;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 15px;
+            text-align: center;
+            a {
+              font-size: 18px;
+            }
+            span {
+              display: block;
+              margin: 10px 120px 0px 20px;
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(very-small-mobile) {
+    & {
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 200px;
+      h1 {
+        padding-top: 30px;
+        font-size: 30px;
+        letter-spacing: 5px;
+      }
+      article {
+        height: 75vh;
+        padding: 0px 17px;
+        div.parent-image {
+          width: 300px;
+          height: 180px;
+          margin: auto;
+          span {
+            margin: 10px 20px 0px 0px;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        div.content {
+          width: 460px;
+          height: 255px;
+          direction: ltr;
+          margin: auto;
+          transform: translateY(25px);
+          scale: 0.9;
+          h2 {
+            font-size: 25px;
+            text-align: center;
+          }
+          p#typed-text-edu {
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.6rem;
+            text-align: center;
+          }
+          p#showLastPara {
+            display: none;
+            font-size: 14px;
+            text-align: center;
+            a {
+              font-size: 18px;
+            }
+            span {
+              display: block;
+              margin: 10px 100px 0px 20px;
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

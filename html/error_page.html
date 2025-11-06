@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Something Went Wrong</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #fff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .error-container img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin-bottom: 25px;
+      }
+
+      .error-container h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      .error-container p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 25px;
+        padding: 0 10px;
+      }
+
+      .error-container .btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .error-container .btn:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 480px) {
+        .error-container h1 {
+          font-size: 1.8rem;
+        }
+
+        .error-container p {
+          font-size: 1rem;
+        }
+
+        .error-container .btn {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <img
+        src="/photos/undraw_server-error_syuz.png"
+        alt="Error Illustration"
+      />
+      <h1>Oops! Something went wrong</h1>
+      <p>
+        The website is currently unavailable. It might be under maintenance or
+        experiencing a temporary issue. Please try again later.
+      </p>
+      <a class="btn" href="/">Back to Home</a>
+    </div>
+  </body>
+</html>
