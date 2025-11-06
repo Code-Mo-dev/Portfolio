@@ -1,0 +1,1054 @@
+@use "_media-responsive" as *;
+@use "_var" as *;
+section.home {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 200px;
+  .content {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    position: absolute;
+    top: 200px;
+    .container_img {
+      width: 400px;
+      height: 375px;
+      position: relative;
+      top: 5%;
+      .content_image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 40px;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+        border: 10px solid transparent;
+        animation: homeContent 1s linear;
+        &:hover {
+          box-shadow: 0 0 30px 10px rgba(94, 234, 212, 0.35),
+            0 0 60px 25px var(--color-for-backlight);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          user-select: none;
+        }
+        .react_icon,
+        .tailwind_icon {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: linear-gradient(45deg, #0d41e1, #07c8f9);
+          animation: float 3s ease-in-out infinite;
+          padding: 5px;
+        }
+        .react_icon {
+          position: absolute;
+          top: 88%;
+          left: 2%;
+        }
+        .tailwind_icon {
+          position: absolute;
+          top: 10%;
+          right: 2%;
+        }
+      }
+    }
+    .index {
+      width: 620px;
+      height: 375px;
+      padding: 30px;
+      user-select: none;
+      position: relative;
+      top: 5%;
+      animation: homeContent 1s linear;
+      .my_name {
+        color: #fff;
+        font-size: 40px;
+        text-transform: capitalize;
+        font-family: var(--font-title);
+        font-weight: 700;
+        display: block;
+        span {
+          color: var(--color-for-backlight);
+          font-family: var(--font-title);
+        }
+      }
+      .my_jop {
+        font-size: 30px;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 30px;
+        font-family: var(--font-title);
+      }
+      .my_name_in_responsive {
+        display: none;
+      }
+      .my_jop_in_responsive {
+        display: none;
+      }
+      .welcome_paragraph {
+        display: none;
+      }
+      #first-text {
+        width: 510px;
+        color: #fff;
+        font-size: 20px;
+        text-wrap: balance;
+        text-transform: capitalize;
+        line-height: 30px;
+        font-family: var(--font-title);
+      }
+      .buttons {
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        bottom: 0%;
+        left: 1%;
+        .linkedin_button,
+        .youTube_button,
+        .gitHub_button {
+          width: 170px;
+          height: 110px;
+          padding: 10px;
+          border: var(--color-for-backlight) 2px solid;
+          border-radius: 15px;
+          margin-inline: 20px;
+          cursor: $cursor-pointer;
+          svg {
+            display: block;
+            margin: auto;
+            cursor: inherit;
+          }
+          .counter {
+            cursor: inherit;
+            display: block;
+            text-align: center;
+            margin: 10px 0px;
+          }
+          #linkedin-num {
+            cursor: inherit;
+            margin: 5px 0px;
+          }
+          span.title {
+            display: block;
+            font-family: var(--font-title);
+            text-transform: capitalize;
+            text-align: center;
+            position: absolute;
+            bottom: 8%;
+            margin-inline: 5%;
+            cursor: inherit;
+          }
+        }
+        .linkedin_button {
+          border-color: #0d41e1;
+          &:hover {
+            box-shadow: 0 4px 20px #0d41e1;
+          }
+        }
+        .youTube_button {
+          border-color: #0a85ed;
+          &:hover {
+            box-shadow: 0 4px 20px #0a85ed;
+          }
+        }
+        .gitHub_button {
+          border-color: #07c8f9;
+          &:hover {
+            box-shadow: 0 4px 20px #07c8f9;
+          }
+        }
+      }
+    }
+  }
+  div.icons {
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    user-select: none;
+    position: relative;
+    top: 12%;
+    background-color: transparent;
+    .bracket_icon,
+    .tag_icon,
+    .text {
+      font-size: 1.5rem;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: rgba(244, 114, 182, 0.2);
+      animation: float 3s ease-in-out infinite;
+      position: absolute;
+    }
+    .bracket_icon {
+      top: 10%;
+      right: 10%;
+    }
+    .tag_icon {
+      top: 90%;
+      right: 10%;
+    }
+    .const {
+      top: 5%;
+      left: 10%;
+    }
+    .API {
+      top: 80%;
+      left: 10%;
+    }
+  }
+  //*todo ----- @keyframes -----
+  /*todo [@keyframes] */
+  @keyframes homeContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /*todo [BackGround icons] */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  //*todo ---------- Responsive ----------
+  /*todo [Responsive] */
+  @include respond(laptop) {
+    .content {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 44px;
+      .container_img {
+        width: 400px;
+        height: 375px;
+        position: relative;
+        top: 5%;
+        .content_image {
+          width: 200px;
+          height: 200px;
+          margin: auto;
+          margin-top: 66px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 6px solid transparent;
+          border-radius: 50%;
+          animation: homeContent 1s linear;
+          &:hover {
+            box-shadow: 0 0 20px 7px rgba(94, 234, 212, 0.35),
+              0 0 45px 15px var(--color-for-backlight);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d41e1, #07c8f9);
+            animation: float 3s ease-in-out infinite;
+            padding: 5px;
+            scale: 0.8;
+          }
+          .react_icon {
+            position: absolute;
+            top: 63%;
+            left: 16%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 20%;
+            right: 15%;
+          }
+        }
+      }
+      .index {
+        width: 555px;
+        top: 5%;
+        left: 2%;
+        .my_name {
+          font-size: 30px;
+        }
+        .my_jop {
+          font-size: 25px;
+        }
+        #first-text {
+          width: 459px;
+          font-size: 18px;
+        }
+        .buttons {
+          width: 500px;
+          bottom: 5%;
+          scale: 0.8;
+          left: -7%;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 170px;
+            height: 105px;
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 5%;
+              margin-inline: 3%;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 1.2rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        top: 10%;
+        right: 10%;
+      }
+      .tag_icon {
+        top: 90%;
+        right: 10%;
+      }
+      .const {
+        top: 7%;
+        left: 10%;
+      }
+      .API {
+        top: 95%;
+        left: 10%;
+      }
+    }
+  }
+  @include respond(ipadPro) {
+    .content {
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 0px;
+      .container_img {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        top: 5%;
+        .content_image {
+          width: 300px;
+          height: 300px;
+          margin: auto;
+          margin-top: 66px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 10px solid transparent;
+          border-radius: 50%;
+          animation: homeContent1s linear;
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d41e1, #07c8f9);
+            animation: float 3s ease-in-out infinite;
+            padding: 5px;
+            scale: 1.2;
+          }
+          .react_icon {
+            position: absolute;
+            top: 88%;
+            left: 2%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+          }
+        }
+      }
+      .index {
+        width: 90%;
+        height: 444px;
+        top: -5%;
+        left: 2%;
+        .my_name {
+          font-size: 50px;
+          text-align: center;
+          width: inherit;
+        }
+        .my_jop {
+          font-size: 40px;
+          text-align: center;
+          width: inherit;
+        }
+        #first-text {
+          width: inherit;
+          text-align: center;
+          font-size: 30px;
+          line-height: 2.7rem;
+        }
+        .buttons {
+          width: inherit;
+          bottom: 0%;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 200px;
+            height: 120px;
+            .counter {
+              font: size 20px;
+            }
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 8%;
+              margin-inline: 6%;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 2rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        top: 10%;
+        right: 10%;
+      }
+      .tag_icon {
+        top: 95%;
+        right: 10%;
+      }
+      .const {
+        top: 7%;
+        left: 10%;
+      }
+      .API {
+        top: 95%;
+        left: 10%;
+      }
+    }
+  }
+  @include respond(tablet) {
+    .content {
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 0px;
+      .container_img {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        top: 5%;
+        .content_image {
+          width: 250px;
+          height: 250px;
+          margin: auto;
+          margin-top: 66px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 10px solid transparent;
+          border-radius: 50%;
+          animation: homeContent1s linear;
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d41e1, #07c8f9);
+            animation: float 3s ease-in-out infinite;
+            padding: 5px;
+          }
+          .react_icon {
+            position: absolute;
+            top: 77%;
+            left: 8%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 15%;
+            right: 8%;
+          }
+        }
+      }
+      .index {
+        width: 90%;
+        height: 444px;
+        top: -5%;
+        left: 0%;
+        padding: 15px;
+        .my_name {
+          font-size: 40px;
+          width: inherit;
+          text-align: center;
+          margin-left: 3%;
+        }
+        .my_jop {
+          font-size: 30px;
+          width: inherit;
+          text-align: center;
+          margin-left: 3%;
+        }
+        #first-text {
+          width: inherit;
+          text-align: center;
+          font-size: 23px;
+          line-height: 2.7rem;
+          margin-left: 3%;
+        }
+        .buttons {
+          width: inherit;
+          bottom: 0%;
+          left: 5%;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 170px;
+            height: 110px;
+            .counter {
+              font: size 20px;
+            }
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 8%;
+              margin-inline: 5%;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 1.6rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        top: 95%;
+        left: 15%;
+      }
+      .tag_icon {
+        top: 95%;
+        right: 15%;
+      }
+      .const {
+        top: 7%;
+        left: 10%;
+      }
+      .API {
+        top: 35%;
+        left: 80%;
+      }
+    }
+  }
+  @include respond(fold-mobile) {
+    .content {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 0px;
+      .container_img {
+        width: 400px;
+        height: fit-content;
+        position: relative;
+        top: 2%;
+        .content_image {
+          width: 220px;
+          height: 220px;
+          margin: auto;
+          margin-top: 70px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 6px solid transparent;
+          border-radius: 50%;
+          animation: homeContent 1s linear;
+          &:hover {
+            box-shadow: 0 0 15px 5px rgba(94, 234, 212, 0.35),
+              0 0 30px 12.5px var(--color-for-backlight);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d41e1, #07c8f9);
+            animation: float 3s ease-in-out infinite;
+            padding: 5px;
+          }
+          .react_icon {
+            position: absolute;
+            top: 88%;
+            left: 11%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 28%;
+            right: 11%;
+          }
+        }
+      }
+      .index {
+        width: 90%;
+        height: 444px;
+        top: 0%;
+        left: 0%;
+        padding: 15px;
+        .my_name {
+          width: inherit;
+          text-align: center;
+          font-size: 35px;
+          margin-left: 3%;
+        }
+        .my_jop {
+          width: inherit;
+          text-align: center;
+          font-size: 27px;
+          margin-left: 3%;
+        }
+        #first-text {
+          width: 90%;
+          font-size: 23px;
+          line-height: 2.2rem;
+          margin-left: 3%;
+          text-align: center;
+        }
+        .buttons {
+          width: 655px;
+          bottom: 7%;
+          left: -2%;
+          justify-content: center;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 155px;
+            height: 110px;
+            .counter {
+              font: size 20px;
+            }
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 8%;
+              margin-inline: 4%;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 1.6rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        top: 10%;
+        right: 15%;
+        width: fit-content;
+      }
+      .tag_icon {
+        top: 30%;
+        left: 10%;
+        width: fit-content;
+      }
+      .const {
+        top: 7%;
+        left: 10%;
+        width: fit-content;
+      }
+      .API {
+        top: 30%;
+        left: 80%;
+        width: fit-content;
+      }
+    }
+  }
+  @include respond(small-mobile) {
+    .content {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 0px;
+      .container_img {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        top: 5%;
+        .content_image {
+          width: 180px;
+          height: 180px;
+          margin: auto;
+          margin-top: 70px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 6px solid transparent;
+          border-radius: 50%;
+          animation: homeContent1s linear;
+          &:hover {
+            box-shadow: 0 0 15px 5px rgba(94, 234, 212, 0.35),
+              0 0 30px 12.5px var(--color-for-backlight);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0d41e1, #07c8f9);
+            animation: float 3s ease-in-out infinite;
+            padding: 5px;
+            scale: 0.8;
+          }
+          .react_icon {
+            position: absolute;
+            top: 58%;
+            left: 17%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 15%;
+            right: 17%;
+          }
+        }
+      }
+      .index {
+        width: 100%;
+        height: 444px;
+        top: -3%;
+        left: 0%;
+        padding: 10px;
+        .my_name {
+          width: inherit;
+          text-align: center;
+          font-size: 30px;
+        }
+        .my_jop {
+          width: inherit;
+          text-align: center;
+          font-size: 25px;
+        }
+        #first-text {
+          width: inherit;
+          text-align: center;
+          font-size: 18px;
+          line-height: 2rem;
+        }
+        .buttons {
+          width: 96%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          bottom: 20%;
+          left: 2%;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 43%;
+            height: 100px;
+            margin-inline: 10px;
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 8%;
+              margin-inline: 4%;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 1.6rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        top: 99%;
+        right: 15%;
+        width: fit-content;
+      }
+      .tag_icon {
+        top: 96%;
+        left: 10%;
+        width: fit-content;
+      }
+      .const {
+        top: 35%;
+        left: 77%;
+        width: fit-content;
+      }
+      .API {
+        top: 1%;
+        left: 7%;
+        width: fit-content;
+      }
+    }
+  }
+  @include respond(very-small-mobile) {
+    .content {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      top: 0px;
+      .container_img {
+        width: 400px;
+        height: fit-content;
+        position: relative;
+        top: -3%;
+        .content_image {
+          width: 150px;
+          height: 150px;
+          margin: auto;
+          margin-top: 115px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(45deg, #0d41e1, #07c8f9) border-box;
+          border: 5px solid transparent;
+          border-radius: 50%;
+          animation: homeContent1s linear;
+          &:hover {
+            box-shadow: 0 0 15px 5px rgba(94, 234, 212, 0.35),
+              0 0 30px 12.5px var(--color-for-backlight);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+          }
+          .react_icon,
+          .tailwind_icon {
+            scale: 0.7;
+          }
+          .react_icon {
+            position: absolute;
+            top: 90%;
+            left: 20%;
+          }
+          .tailwind_icon {
+            position: absolute;
+            top: 42%;
+            right: 20%;
+          }
+        }
+      }
+      .index {
+        width: 100%;
+        height: 365px;
+        top: 0%;
+        left: 0%;
+        padding: 10px;
+        .my_name {
+          font-size: 25px;
+          width: inherit;
+          text-align: center;
+        }
+        .my_jop {
+          font-size: 20px;
+          width: inherit;
+          text-align: center;
+          margin-bottom: 25px;
+        }
+        #first-text {
+          width: inherit;
+          font-size: 16px;
+          line-height: 1.7rem;
+        }
+        .buttons {
+          width: 95%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 2.5%;
+          bottom: 8%;
+          .linkedin_button,
+          .youTube_button,
+          .gitHub_button {
+            width: 33%;
+            height: 100px;
+            span.title {
+              display: block;
+              font-family: var(--font-title);
+              text-transform: capitalize;
+              text-align: center;
+              position: absolute;
+              bottom: 8%;
+              margin-inline: 2%;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    div.icons {
+      width: 100%;
+      height: 80%;
+      z-index: -1;
+      user-select: none;
+      position: relative;
+      top: 12%;
+      background-color: transparent;
+      .bracket_icon,
+      .tag_icon,
+      .text {
+        font-size: 1.2rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(244, 114, 182, 0.2);
+        animation: float 3s ease-in-out infinite;
+        position: absolute;
+      }
+      .bracket_icon {
+        display: none;
+      }
+      .tag_icon {
+        display: none;
+      }
+      .const {
+        top: 35%;
+        left: 77%;
+        width: fit-content;
+      }
+      .API {
+        top: 5%;
+        left: 7%;
+        width: fit-content;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use "_media-responsive" as *;
+@use "_var" as *;
+footer {
+  background-color: #1a0b2e;
+  width: 100%;
+  height: 100px;
+  div {
+    margin: auto;
+    h2 {
+      color: white;
+      text-align: center;
+      text-transform: capitalize;
+      font-family: var(--main-font);
+      font-weight: 700;
+      padding-top: 40px;
+      span a {
+        color: var(--main-color);
+        text-decoration: none;
+        font-family: var(--main-font);
+        cursor: $cursor-pointer;
+      }
+    }
+  }
+  //*todo ---------- Responsive ----------
+  @include respond(laptop) {
+    & {
+      div {
+        h2 {
+          font-weight: 500;
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+  @include respond(ipadPro) {
+    & {
+      div {
+        h2 {
+          font-weight: 600;
+          letter-spacing: 4px;
+          span a {
+            letter-spacing: 2px;
+            color: var(--main-color);
+            text-decoration: none;
+            font-family: var(--main-font);
+          }
+        }
+      }
+    }
+  }
+  @include respond(tablet) {
+    & {
+      div {
+        h2 {
+          font-weight: 600;
+          font-size: 1.3rem;
+          letter-spacing: 4px;
+          span a {
+            letter-spacing: 2px;
+            color: var(--main-color);
+            text-decoration: none;
+            font-family: var(--main-font);
+          }
+        }
+      }
+    }
+  }
+  @include respond(fold-mobile) {
+    & {
+      div {
+        h2 {
+          font-weight: 500;
+          font-size: 1.3rem;
+          span a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-family: var(--main-font);
+          }
+        }
+      }
+    }
+  }
+  @include respond(small-mobile) {
+    & {
+      height: 70px;
+      div {
+        h2 {
+          font-weight: 500;
+          font-size: 1rem;
+          padding-top: 0px;
+          transform: translateY(28px);
+          span a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-family: var(--main-font);
+          }
+        }
+      }
+    }
+  }
+  @include respond(very-small-mobile) {
+    & {
+      height: 70px;
+      div {
+        h2 {
+          font-weight: 500;
+          font-size: 0.8rem;
+          padding-top: 0px;
+          transform: translateY(30px);
+          span a {
+            color: var(--main-color);
+            text-decoration: none;
+            font-family: var(--main-font);
+          }
+        }
+      }
+    }
+  }
+}

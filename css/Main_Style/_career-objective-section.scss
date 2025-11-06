@@ -1,0 +1,227 @@
+@use "_media-responsive" as *;
+
+section.career-objective {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  margin-bottom: 300px;
+  background-color: var(--background-color);
+  position: relative;
+  h1 {
+    color: var(--main-color);
+    text-transform: capitalize;
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 50px;
+    letter-spacing: 7px;
+    user-select: none;
+    animation: scale-career linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  .contant-career {
+    width: 60%;
+    margin: auto;
+    margin-top: 70px;
+    animation: scale-career linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    p {
+      width: 100%;
+      color: #fff;
+      font-size: 20px;
+      line-height: 40px;
+      text-wrap: balance;
+      text-transform: capitalize;
+      font-family: var(--main-font);
+      text-align: center;
+    }
+  }
+  .avarat_career {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    animation: scale-career linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+  //*todo ----- @keyframes -----
+  @keyframes scale-career {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  //*todo ---------- Responsive ----------
+  @include respond(laptop) {
+    & {
+      padding-top: 50px;
+      h1 {
+        font-size: 35px;
+        letter-spacing: 7px;
+      }
+      .avarat_career {
+        width: 200px;
+        height: 200px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 62%;
+        margin-top: 30px;
+        p {
+          font-size: 18px;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+  @include respond(ipadPro) {
+    & {
+      padding-top: 50px;
+      margin-bottom: 100px;
+      h1 {
+        font-size: 60px;
+        letter-spacing: 7px;
+      }
+      .avarat_career {
+        width: 500px;
+        height: 500px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 88%;
+        margin-top: 30px;
+        p {
+          font-size: 33px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+  @include respond(tablet) {
+    & {
+      padding-top: 50px;
+      margin-bottom: 100px;
+      h1 {
+        font-size: 50px;
+        letter-spacing: 7px;
+      }
+      .avarat_career {
+        width: 350px;
+        height: 350px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 83%;
+        margin-top: 50px;
+        p {
+          font-size: 25px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+  @include respond(fold-mobile) {
+    & {
+      padding-top: 50px;
+      margin-bottom: 100px;
+      h1 {
+        font-size: 35px;
+        letter-spacing: 7px;
+      }
+      .avarat_career {
+        width: 250px;
+        height: 250px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 78%;
+        margin-top: 50px;
+        p {
+          font-size: 20px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+  @include respond(small-mobile) {
+    & {
+      padding-top: 50px;
+      margin-bottom: 50px;
+      height: 75vh;
+      h1 {
+        font-size: 25px;
+        letter-spacing: 5px;
+      }
+      .avarat_career {
+        width: 200px;
+        height: 200px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 83%;
+        margin-top: 50px;
+        p {
+          font-size: 16px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+  @include respond(very-small-mobile) {
+    & {
+      padding-top: 50px;
+      margin-bottom: 50px;
+      h1 {
+        font-size: 25px;
+        letter-spacing: 7px;
+      }
+      .avarat_career {
+        width: 200px;
+        height: 200px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      .contant-career {
+        width: 84%;
+        margin-top: 50px;
+        p {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+}

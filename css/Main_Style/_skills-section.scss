@@ -1,0 +1,310 @@
+@use "_media-responsive" as *;
+@use "_var" as *;
+section.skills {
+  width: 100%;
+  margin-bottom: 200px;
+  user-select: none;
+  scale: 0.9;
+  h1 {
+    padding-top: 100px;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 50px;
+    font-family: var(--font-title);
+    letter-spacing: 7px;
+    user-select: none;
+    animation: scale-section linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  section.content_skills {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 30px;
+    div.card {
+      width: 350px;
+      height: 340px;
+      background-color: #11071f;
+      border: solid 2px #00adc6;
+      border-radius: 15px;
+      animation: scale-section linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+      &:hover {
+        &:hover {
+          box-shadow: 0 4px 20px #07c8f9;
+        }
+      }
+      svg {
+        display: block;
+        margin-inline: calc(50% - 35px);
+        margin-top: 30px;
+      }
+      span {
+        display: block;
+        color: #fff;
+        font-size: x-large;
+        font-family: var(--main-font);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 20px;
+        font-family: var(--main-font);
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+        margin: 20px 0px;
+      }
+      div.source {
+        width: 100%;
+        a {
+          font-size: 18px;
+          font-family: var(--main-font);
+          color: #fff;
+          display: block;
+          margin: auto;
+          text-align: center;
+          text-transform: capitalize;
+          margin-bottom: 10px;
+          width: fit-content;
+          &:hover {
+            color: #00adc6;
+            cursor: $cursor-pointer;
+          }
+        }
+        :first-child {
+          text-transform: capitalize;
+        }
+      }
+    }
+    div.card.git_gitHub {
+      position: relative;
+      div.container_git_github {
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        .icon_git,
+        .icon_github {
+          display: inline;
+          margin: auto;
+        }
+        .icon_git {
+          position: absolute;
+          top: 33px;
+          left: 20%;
+        }
+        .icon_github {
+          position: absolute;
+          top: 33px;
+          right: 20%;
+        }
+      }
+      span {
+        position: relative;
+        top: 34%;
+      }
+      div.container_bar {
+        width: 70%;
+        height: 7px;
+        background-color: #fff;
+        border-radius: 20px;
+        position: absolute;
+        top: 53%;
+        left: 15%;
+        span.bar {
+          width: 95%;
+          height: 7px;
+          background-color: var(--color-for-backlight);
+          border-radius: 20px;
+          position: absolute;
+          top: -20px;
+          left: 0;
+        }
+      }
+      p {
+        position: absolute;
+        top: 57%;
+        left: 23%;
+      }
+      div.source {
+        position: absolute;
+        bottom: 5%;
+      }
+    }
+    //*todo [style for bars]
+    div.card:not(div.card.git_github) {
+      div.container_bar {
+        width: 70%;
+        height: 7px;
+        background-color: #fff;
+        margin: auto;
+        border-radius: 20px;
+        span.bar {
+          width: 100%;
+          height: 7px;
+          background-color: var(--color-for-backlight);
+          border-radius: 20px;
+        }
+      }
+    }
+    .animate-bar {
+      animation: bar_skills 2s linear;
+    }
+  }
+  //*todo [@keyframes]
+  /** from skills section */
+  @keyframes bar_skills {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes scale-section {
+    from {
+      scale: 0;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  //*todo [Responsive]
+  @include respond(laptop) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        padding-top: 50px;
+        font-size: 40px;
+        letter-spacing: 10px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+        column-gap: 10px;
+        row-gap: 100px;
+        animation-range: entry 0% cover 20%;
+      }
+    }
+  }
+  @include respond(ipadPro) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        font-size: 60px;
+        padding-top: 100px;
+        letter-spacing: 10px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        column-gap: 10px;
+        row-gap: 100px;
+      }
+    }
+  }
+  @include respond(tablet) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        font-size: 60px;
+        padding-top: 70px;
+        letter-spacing: 10px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 70px;
+        column-gap: 10px;
+        row-gap: 40px;
+      }
+    }
+  }
+  @include respond(fold-mobile) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        font-size: 50px;
+        padding-top: 50px;
+        letter-spacing: 10px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        column-gap: 10px;
+        row-gap: 40px;
+        div.card {
+          width: 300px;
+          height: 345px;
+        }
+        .animate-bar {
+          animation: bar_skills 3s linear;
+        }
+      }
+    }
+  }
+  @include respond(small-mobile) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        font-size: 50px;
+        padding-top: 50px;
+        letter-spacing: 5px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        column-gap: 10px;
+        row-gap: 40px;
+        div.card {
+          width: 300px;
+          height: 345px;
+          animation-range: entry 0% cover 30%;
+        }
+      }
+    }
+  }
+  @include respond(very-small-mobile) {
+    & {
+      width: 100%;
+      margin-bottom: 200px;
+      h1 {
+        font-size: 35px;
+        padding-top: 50px;
+        letter-spacing: 7px;
+      }
+      section.content_skills {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        column-gap: 10px;
+        row-gap: 40px;
+        div.card {
+          width: 300px;
+          height: 345px;
+        }
+      }
+    }
+  }
+}

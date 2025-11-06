@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mo.UI Components Gallery is currently under maintenance. We'll be back with new updates soon!">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mo.UI — Maintenance Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#7c3aed;
+      --muted:#9aa4b2;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Cairo',sans-serif;
+      background:linear-gradient(180deg,var(--bg) 0%, #08111a 100%);
+      color:#e6eef8;
+      display:flex;align-items:center;justify-content:center;padding:32px;
+    }
+    .container{
+      width:100%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.6);display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;
+    }
+    @media (max-width:900px){
+      .container{grid-template-columns:1fr; padding:20px}
+    }
+    .left{padding:12px 8px;}
+    h1{margin:0 0 10px 0;font-size:36px;line-height:1.05;}
+    .lead{color:var(--muted);margin-bottom:18px;font-size:16px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:16px;border-radius:12px;margin-top:18px;
+    }
+    .countdown{display:flex;gap:12px;margin-top:12px}
+    .time{min-width:72px;background:rgba(255,255,255,0.03);padding:10px;border-radius:8px;text-align:center;font-weight:700;font-size:18px}
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#ffffff}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    form{display:flex;gap:8px;flex-wrap:wrap}
+    input[type="email"]{flex:1;min-width:200px;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .socials{display:flex;gap:10px;margin-top:12px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;color:inherit;font-weight:700}
+
+    .right{display:flex;align-items:center;justify-content:center}
+    .ill-card{width:100%;max-width:380px;border-radius:14px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border:1px solid rgba(255,255,255,0.03); margin-top: 190px;}
+    .info-row{display:flex;align-items:center;gap:12px;margin-top:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    .logo{transform:translateY(0);transition:transform .4s}
+    .container:hover .logo{transform:translateY(-6px)}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="left">
+      <div class="info-row">
+        <div class="logo">Mo</div>
+        <div>
+          <div style="font-weight:700;font-size:14px">Mo.UI Components Gallery</div>
+          <div class="small">UI Components System — Gallery</div>
+        </div>
+      </div>
+
+      <h1>We'll be back soon — Under Maintenance</h1>
+      <p class="lead">We need a little time to improve and prepare our components library. We'll be back with faster updates and a better experience. Leave your email and we'll notify you once we're live.</p>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Expected Launch Date</div>
+            <div class="small">Approximate date — subject to updates</div>
+          </div>
+          <div style="text-align:center">
+            <div id="launchDate" class="small">-- : -- : --</div>
+            <div class="small">Days : Hours : Minutes</div>
+          </div>
+        </div>
+
+        <div class="countdown" aria-hidden="true">
+          <div class="time"><span id="days">--</span><div class="small">Days</div></div>
+          <div class="time"><span id="hours">--</span><div class="small">Hours</div></div>
+          <div class="time"><span id="minutes">--</span><div class="small">Minutes</div></div>
+        </div>
+
+        <form id="notifyForm" class="card" onsubmit="return false" style="margin-top:12px;display:flex;align-items:center">
+          <input id="email" type="email" placeholder="Enter your email" required />
+          <button id="notifyBtn" class="btn btn-primary">Notify Me</button>
+        </form>
+
+        <div class="actions">
+          <button class="btn btn-ghost" onclick="openDocs()">Documentation</button>
+          <button class="btn btn-ghost" onclick="contact()">Contact Us</button>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/Code-Mo-dev" aria-label="GitHub" target="_blank">GH</a>
+          <a href="https://www.linkedin.com/in/mohamed-mahmoud-024714335/" aria-label="Linkedin" target="_blank">LI</a>
+          <a href="https://youtube.com/@code_mo_academy?si=D7ohe4vDjV9RvyOY" aria-label="YouTube" target="_blank">YT</a>
+        </div>
+      </div>
+
+      <footer>
+        <div>© Mo.UI — All rights reserved</div>
+        <div class="small">For urgent matters, contact: <strong>codemo2004@gmail.com</strong></div>
+      </footer>
+    </div>
+
+    <div class="right">
+      <div class="ill-card">
+        <img src="../photos/maintenance.svg" alt="Maintenance illustration" style="width:100%;height:auto;display:block;margin-bottom:12px;"/>
+        <div style="font-weight:700;font-size:18px;margin-bottom:6px">Coming Soon — New Updates</div>
+        <div class="small">We’re adding improvements, component controls, and live previews.</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const launch = new Date("2027-01-01T12:00:00");
+
+      function update(){
+        const now = new Date();
+        let diff = Math.max(0, launch - now);
+        const days = Math.floor(diff / (1000*60*60*24));
+        diff -= days*(1000*60*60*24);
+        const hours = Math.floor(diff / (1000*60*60));
+        diff -= hours*(1000*60*60);
+        const minutes = Math.floor(diff / (1000*60));
+
+        document.getElementById('days').textContent = String(days).padStart(2,'0');
+        document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+
+        if(launch - now <= 0){
+          document.getElementById('launchDate').textContent = 'Launched';
+        }
+      }
+      update();
+      setInterval(update, 60*1000);
+
+      document.getElementById('notifyForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        if(!email) return;
+        alert('Thanks! We will notify you at ' + email);
+        document.getElementById('email').value = '';
+      });
+    })();
+
+    function openDocs(){
+      window.open('#','_blank');
+    }
+    function contact(){
+      window.location.href = '../index.html#contact';
+    }
+  </script>
+</body>
+</html>

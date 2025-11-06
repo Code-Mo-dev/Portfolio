@@ -1,0 +1,28 @@
+//* ---------------- Mixin for media ----------------
+@mixin respond($break) {
+  @if $break == laptop {
+    @media (min-width: 993px) and (max-width: 1200px) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $break == ipadPro {
+    @media (min-width: 994px) and (max-width: 1366px) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $break == tablet {
+    @media (min-width: 769px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $break == fold-mobile {
+    @media (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $break == small-mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $break == very-small-mobile {
+    @media (max-width: 480px) and (max-height: 712px) {
+      @content;
+    }
+  }
+}

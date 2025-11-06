@@ -1,0 +1,98 @@
+Portfolio Project Structure
+============================
+
+Portfolio/
+├── index.html                          # Main portfolio page
+├── README.md                           # Project documentation
+├── prepros.config                      # Prepros configuration file
+│
+├── css/                                # Stylesheets directory
+│   ├── Global Style/                   # Global CSS files
+│   │   ├── all.min.css                # Minified CSS library
+│   │   └── normalize.css              # CSS reset/normalize
+│   │
+│   ├── Main_Style/                     # Main SCSS files
+│   │   ├── _career-objective-section.scss
+│   │   ├── _contact-section.scss
+│   │   ├── _education-section.scss
+│   │   ├── _footer-section.scss
+│   │   ├── _header.scss
+│   │   ├── _home-section.scss
+│   │   ├── _languages-section.scss
+│   │   ├── _media-responsive.scss
+│   │   ├── _root.scss
+│   │   ├── _skills-section.scss
+│   │   ├── _var.scss
+│   │   ├── _work-section.scss
+│   │   ├── main.css                    # Compiled main CSS
+│   │   └── main.scss                   # Main SCSS file
+│   │
+│   ├── certifications page/            # Certifications page styles
+│   │   ├── certifications.css         # Compiled CSS
+│   │   └── certifications.scss        # SCSS source
+│   │
+│   └── webfonts/                       # Font Awesome files
+│       ├── fa-brands-400.ttf
+│       ├── fa-brands-400.woff2
+│       ├── fa-regular-400.ttf
+│       ├── fa-regular-400.woff2
+│       ├── fa-solid-900.ttf
+│       ├── fa-solid-900.woff2
+│       ├── fa-v4compatibility.ttf
+│       └── fa-v4compatibility.woff2
+│
+├── html/                               # HTML pages directory
+│   ├── certifications.html            # Certifications page
+│   ├── error_page.html                # Error page
+│   ├── mo_ui_components_gallery_maintenance.html # This page is temporarily available.
+│   └── Privacy.html                   # Privacy policy page
+│
+├── javaScript/                         # JavaScript files
+│   ├── certifications.js              # Certifications page logic
+│   └── main.js                        # Main portfolio logic
+│
+└── photos/                            # Images and assets directory
+    ├── avatar_career.svg
+    ├── avatar_contact.png
+    ├── bookmark-fav-dynamic-color.png
+    ├── brush-dynamic-color.png
+    ├── cursor_32.png
+    ├── fire-dynamic-color.png
+    ├── Logo.png
+    ├── maintenance.svg
+    ├── my edu.jpg
+    ├── notebook-dynamic-color.png
+    ├── pointer_32.png
+    ├── profile-img.png
+    ├── undraw_private-files_m2bw.svg
+    ├── undraw_server-error_syuz.png
+    ├── vue.png
+    ├── web side icon.png
+    │
+    └── Certificals/                   # Certificates images
+        ├── git&github-certificate.png
+        ├── HTML CERTIFICAL.png
+        └── IBM - Certifical.png
+
+File Types Summary:
+==================
+- HTML Files: 5 files
+- CSS/SCSS Files: 15 files
+- JavaScript Files: 2 files
+- Image Files: 18 files
+- Font Files: 8 files
+- Configuration Files: 2 files
+- Documentation: 1 file
+
+Total Files: 51 files
+
+Project Description:
+===================
+This is a personal portfolio website built with HTML, CSS (SCSS), and JavaScript.
+The project includes:
+- Main portfolio page with sections for home, skills, education, work, etc.
+- Certifications page with interactive certificate viewing
+- Responsive design for multiple screen sizes
+- Modern UI components and animations
+- Font Awesome icons integration
+- SCSS preprocessing with organized partials
