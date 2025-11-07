@@ -39,7 +39,6 @@ section.work {
     div {
       width: 450px;
       height: 200px;
-      display: flex;
       border-top: var(--color-for-backlight) solid 2px;
       border-radius: 20px;
       margin-bottom: 30px;
@@ -509,8 +508,7 @@ section.work {
   @include respond(small-mobile) {
     & {
       width: 100%;
-      height: 120vh;
-      margin-bottom: 200px !important;
+      height: 100vh;
       position: relative;
       h1 {
         width: 100%;
@@ -524,17 +522,20 @@ section.work {
       }
       section.cards {
         width: 100%;
-        height: 84vh;
-        margin: auto;
+        height: 100%;
+        scale: 0.8;
         position: relative;
-        top: 10%;
+        top: 3%;
         animation: none;
         div {
           width: 450px;
           height: 200px;
-          scale: 0.8;
+          scale: 0.9;
+          position: absolute;
+          left: -3%;
           &:first-child {
-            transform: translate(-2%, 12%);
+            top: 16%;
+            transform: translateY(-73%);
             img {
               top: 20%;
               left: 1%;
@@ -553,7 +554,8 @@ section.work {
             }
           }
           &:nth-child(2) {
-            transform: translate(-2%, -8%);
+            top: 40%;
+            transform: translateY(-70%);
             img {
               top: 20%;
             }
@@ -571,13 +573,100 @@ section.work {
             }
           }
           &:nth-child(3) {
-            transform: translate(3%, 256%);
+            top: 19%;
+            transform: translateY(163%);
             a {
               left: 40%;
             }
           }
           &:last-child {
-            transform: translate(3%, 12%);
+            top: 42%;
+            transform: translateY(168%);
+            a {
+              left: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond(iphone-12) {
+    & {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        top: 5%;
+        left: 0%;
+        animation: none;
+      }
+      section.cards {
+        width: 100%;
+        height: 100%;
+        scale: 0.8;
+        position: relative;
+        top: 3%;
+        animation: none;
+        div {
+          width: 450px;
+          height: 200px;
+          scale: 0.8;
+          position: absolute;
+          left: -8%;
+          &:first-child {
+            top: 16%;
+            transform: translateY(-73%);
+            img {
+              top: 20%;
+              left: 1%;
+            }
+            h4 {
+              top: 18%;
+              left: 22%;
+            }
+            p {
+              top: 40%;
+              left: 22%;
+            }
+            a {
+              top: 77%;
+              left: 39%;
+            }
+          }
+          &:nth-child(2) {
+            top: 40%;
+            transform: translateY(-70%);
+            img {
+              top: 20%;
+            }
+            h4 {
+              top: 15%;
+              left: 22%;
+            }
+            p {
+              top: 33%;
+              left: 22%;
+            }
+            a {
+              bottom: 7%;
+              left: 39%;
+            }
+          }
+          &:nth-child(3) {
+            top: 19%;
+            transform: translateY(163%);
+            a {
+              left: 40%;
+            }
+          }
+          &:last-child {
+            top: 42%;
+            transform: translateY(168%);
             a {
               left: 40%;
             }
@@ -590,35 +679,33 @@ section.work {
     & {
       width: 100%;
       height: 100vh;
-      margin: 200px 0px 300px !important;
       position: relative;
       h1 {
         width: 100%;
         text-align: center;
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 400;
         letter-spacing: 3px;
-        top: 5%;
+        top: 1%;
         left: 0%;
         animation: none;
       }
-      .back_light {
-        box-shadow: 0 0 180px 135px #763cac;
-        top: 36%;
-      }
       section.cards {
         width: 100%;
-        height: 93vh;
-        margin: auto;
+        height: 110%;
+        scale: 0.8;
         position: relative;
-        top: 10%;
+        top: 1%;
         animation: none;
         div {
           width: 450px;
           height: 200px;
-          scale: 0.6;
+          scale: 0.8;
+          position: absolute;
+          left: -10.5%;
           &:first-child {
-            transform: translate(-13%, -7%);
+            top: 13%;
+            transform: translateY(-73%);
             img {
               top: 20%;
               left: 1%;
@@ -637,7 +724,8 @@ section.work {
             }
           }
           &:nth-child(2) {
-            transform: translate(-13%, -70%);
+            top: 38%;
+            transform: translateY(-70%);
             img {
               top: 20%;
             }
@@ -655,13 +743,15 @@ section.work {
             }
           }
           &:nth-child(3) {
-            transform: translate(15%, 244%);
+            top: 13%;
+            transform: translateY(163%);
             a {
               left: 40%;
             }
           }
           &:last-child {
-            transform: translate(15%, 12%);
+            top: 38%;
+            transform: translateY(168%);
             a {
               left: 40%;
             }
