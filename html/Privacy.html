@@ -63,9 +63,10 @@
         font-family: var(--main-font);
       }
 
-      .content strong {
+      .content p strong {
         color: #fff;
         font-family: var(--font-title);
+        font-weight: 600;
       }
 
       .illustration {
@@ -78,29 +79,213 @@
       .illustration img {
         width: 70%;
         max-width: 350px;
+        height: auto;
       }
-      strong {
+
+      .content strong {
         font-size: 20px;
         text-transform: capitalize;
         font-weight: 300;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
-        a {
-          text-transform: lowercase;
-          text-decoration: none;
-          color: gray;
-        }
-        svg {
-          width: 20px;
-          height: 20px;
-        }
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        color: #fff;
       }
+
+      .content strong a {
+        text-transform: lowercase;
+        text-decoration: none;
+        color: #9da5b4;
+        transition: color 0.3s;
+      }
+
+      .content strong a:hover {
+        color: #fff;
+      }
+
+      .content strong svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
       .footer {
         margin-top: 20px;
         font-size: 14px;
         text-align: center;
         color: #6e7681;
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        body {
+          padding: 16px;
+        }
+
+        .card {
+          padding: 32px;
+          gap: 24px;
+        }
+
+        .content h1 {
+          font-size: 26px;
+        }
+
+        .content p {
+          font-size: 15px;
+        }
+
+        .illustration img {
+          width: 80%;
+          max-width: 300px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        body {
+          padding: 16px;
+          align-items: flex-start;
+          min-height: 100vh;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+
+        .card {
+          flex-direction: column;
+          padding: 28px;
+          gap: 32px;
+          max-width: 100%;
+        }
+
+        .content {
+          width: 100%;
+          order: 1;
+        }
+
+        .illustration {
+          width: 100%;
+          order: 0;
+        }
+
+        .illustration img {
+          width: 60%;
+          max-width: 280px;
+        }
+
+        .content h1 {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        .content p {
+          font-size: 15px;
+          text-align: justify;
+        }
+
+        .content strong {
+          font-size: 18px;
+          justify-content: center;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .footer {
+          font-size: 13px;
+        }
+      }
+
+      /* Small Mobile */
+      @media (max-width: 480px) {
+        body {
+          padding: 12px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .card {
+          padding: 20px;
+          gap: 24px;
+          border-radius: 12px;
+        }
+
+        .content h1 {
+          font-size: 22px;
+          margin-bottom: 14px;
+        }
+
+        .content p {
+          font-size: 14px;
+          line-height: 1.6;
+          margin-bottom: 14px;
+        }
+
+        .illustration img {
+          width: 70%;
+          max-width: 240px;
+        }
+
+        .content strong {
+          font-size: 16px;
+          gap: 10px;
+        }
+
+        .content strong a {
+          font-size: 14px;
+          word-break: break-all;
+        }
+
+        .content strong svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        .footer {
+          font-size: 12px;
+          margin-top: 16px;
+        }
+      }
+
+      /* Very Small Mobile */
+      @media (max-width: 360px) {
+        body {
+          padding: 10px;
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+
+        .card {
+          padding: 16px;
+          gap: 20px;
+        }
+
+        .content h1 {
+          font-size: 20px;
+        }
+
+        .content p {
+          font-size: 13px;
+        }
+
+        .illustration img {
+          width: 80%;
+          max-width: 200px;
+        }
+
+        .content strong {
+          font-size: 15px;
+        }
+
+        .content strong a {
+          font-size: 13px;
+        }
+
+        .footer {
+          font-size: 11px;
+        }
       }
     </style>
   </head>
